@@ -13,4 +13,16 @@
 ### Cons 
 - does not seem to be able to check for web based attacks
 
+## BurbSuite
+### setup
+- download tool from https://portswigger.net/burp/community-download-thank-you
+- run install script for your respective system
+- use built in browser to examine web based services 
 
+### Pros
+- looks like it can automate detection and attack of vulnerabilites
+
+### Cons
+- looks like it has a steep learning curve. 
+- not sure if its allowed
+- some exploits may be behind a paywall.
