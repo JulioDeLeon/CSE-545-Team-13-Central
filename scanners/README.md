@@ -11,7 +11,7 @@
 - can be used on remote systems
 
 ### Cons 
-- does not seem to be able to check for web based attacks
+- does not check for web based attacks
 
 ## BurbSuite
 ### setup
@@ -25,4 +25,3 @@
 ### Cons
 - looks like it has a steep learning curve. 
 - not sure if its allowed
-- some exploits may be behind a paywall.
