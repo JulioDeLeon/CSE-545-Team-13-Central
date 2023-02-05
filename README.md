@@ -19,3 +19,12 @@ This script runs arp-scan and saves information into a file called ip.txt. This 
 
   - 3 packets received by filter, 0 packets dropped by kernel
   - Ending arp-scan 1.9.7: 256 hosts scanned in 2.164 seconds (118.30 hosts/sec). 3 responded
+
+### nmap-script.sh
+This script runs nmap for the provided network and saves information into a file called scanned_ips and port information into a file called scanned_ports. 
+
+  -p Expects a file with a list of ports and the -n network arg. One port per line without a newline at the end. This will output all port infomation for the network in a file named scanned_ports. A port range can also be specified. i.e. 22-500
+
+  -n Expects a network in the form of 192.168.0.0\/24
+  
+  -s Scans the given network and lists all the ips in a file called scanned_ips. If this value is not given, the network scan of ips will not be performed.
