@@ -1,0 +1,68 @@
+2 types of ports to scan:
+
+- TCP
+
+  Scanner sends a SYN packet to the server via the port in question.
+  
+  Open:   SYN-ACK is sent back
+  Closed: RST is sent back	
+
+- UDP
+
+  UDP packet is sent to port in question.
+
+  Open:   No response.
+  Closed: ICMP packet sent back
+
+  Often not reliable because ICMP packetes can be dropped by firewalls,
+  generating false positives.
+
+
+Port Scanning:
+
+- Tools
+
+  Nmap:
+
+    Install:  sudo apt-get update
+              sudo apt-get upgrade -y
+              sudo apt-get install nmap -y
+
+    Usage:    nmap [hostname]
+
+    Options:  -p- :    Scan for all 65535 ports
+              -sT :    TCP connect scan
+              -sU :    UDP scan
+              -v  :    Verbose
+              -A  :    Agressive; scans for everything
+              -Pn :    In case server blocks ping
+
+  Netcat:
+
+    Install:  sudo apt install netcat-traditional -y
+
+    Usage:    nc -z -nv localhost [port - range]
+
+
+SSH:
+
+    $ sudo apt-get install openssh-server		# install
+    $ sudo systemctl status ssh				# check status
+    $ ssh username@hostname				# ssh	
+
+
+Uncomplicated Firewall (UFW):
+
+    $ sudo ufw enable					# enable and auto-start
+    $ sudo ufw deny 22					# deny traffic on port 22
+    $ sudo ufw allow 22					# allow traffic on port 22
+
+ 	
+
+
+
+
+
+
+
+
