@@ -47,17 +47,31 @@ Port Scanning:
 SSH:
 
     $ sudo apt-get install openssh-server		# install
-    $ sudo systemctl status ssh				# check status
+    $ sudo systemctl status ssh				      # check status
     $ ssh username@hostname				# ssh	
 
 
 Uncomplicated Firewall (UFW):
 
-    $ sudo ufw enable					# enable and auto-start
-    $ sudo ufw deny 22					# deny traffic on port 22
-    $ sudo ufw allow 22					# allow traffic on port 22
+    # set up ufw
+    $ sudo ufw default deny incoming
+    $ sudo ufw default deny outgoing
+    $ sudo ufw enable
 
- 	
+    # reset
+    # sudo ufw reset
+    # sudo ufw enable
+
+    $ sudo ufw allow 22                    # ssh
+
+    # allow internet via browser
+    $ sudo ufw allow out to any port 80   # http
+    $ sudo ufw allow out to any port 443  # https
+    $ sudo ufw allow out to any port 53   # DNS
+    $ sudo ufw deny out to any port 80
+    $ sudo ufw deny out to any port 443
+    $ sudo ufw deny out to any port 53
+
 
 
 
