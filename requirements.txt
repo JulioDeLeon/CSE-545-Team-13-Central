@@ -1,0 +1,2 @@
+scapy==2.5.0
+watchdog==2.2.1
